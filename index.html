@@ -31,7 +31,6 @@
 
   
     <div class="off-canvas-wrap" data-offcanvas>
-  <div class="inner-wrap">
 
     <!-- Off Canvas Menu -->
     <aside
@@ -40,20 +39,25 @@
     
     >
         <ul class="off-canvas-list">
-          <li><a href="/">Home</a></li>
-<li><a href="/personal">Personal</a></li>
-<li class="has-dropdown has-submenu">
-  <a href="/business">Business</a>
-  <ul class="dropdown left-submenu">
-    <li class="back"><a href="#">Back</a></li>
+          <li><a href="#">Home</a></li>
+<li><a href="#">Personal</a></li>
+<li><a href="#" class="off-canvas-submenu-call">Business <span class="right"> + </span></a>
+  <ul class="off-canvas-submenu">
     <li class=""><a href="/articles/auto-insurance">Auto Insurance</a></li>
     <li><a href="#">Active link in dropdown</a></li>
   </ul>
 </li>
+<li><a href="#">Research Center</a></li>
+<li><a href="#">Client Service</a></li>
+<li><a href="#">Contact Us</a></li>
 
 
         </ul>
     </aside>
+
+    <a class="exit-off-canvas"></a>
+
+  <div class="inner-wrap">
 
     <header class="o-banner js-banner u-hidden@print" role="banner">
   <div class="u-row" data-equalizer>
@@ -71,9 +75,9 @@
     </a>
     <span class="c-navigation__phone@md">Call (800) 811-5841</span>
   </div>
-  <ul class="c-navigation@lg">
+  <ul class="c-navigation@md">
     <li><a class="" href="/client-service/claims">Claims</a></li>
-<li><a class="" href="/contact-us/about">About</a></li>
+<li><a class="" href="#">About</a></li>
 
 
   </ul>
@@ -103,7 +107,7 @@
       <div id="TopPane" class="o-top-pane">
   <div class="c-quick-quote c-quick-quote--modal">
   <h2 class="c-quick-quote__title">We protect what matters most</h2>
-  <input class="c-quick-quote__postal" id="qquote-postal" maxlength="5" value="Your Postal Code" type="text">
+  <input class="c-quick-quote__postal" id="qquote-postal" maxlength="5" value="Postal Code" type="text">
   <select class="c-quick-quote__niches" id="qquote-niches">
     <option value="/personal/auto-insurance">Auto Insurance</option>
     <option value="/personal/home-insurance">Home Insurance</option>
@@ -116,19 +120,23 @@
   
 
 <div class="c-slider js-slider u-hidden@print">
-  <div><img src="http://placehold.it/1200x534/f4d6c7/ffffff" alt=""></div>
-  <div><img src="http://placehold.it/1200x534/2b6f5b/ffffff" alt=""></div>
-  <div><img src="http://placehold.it/1200x534/825374/ffffff" alt=""></div>
+  <div><img src="images/classic-car_000018357694.jpg" alt="Classic Car"></div>
+  <div><img src="images/lifestyle_000008545106.jpg" alt="Lifestyle"></div>
+  <div><img src="images/business_000019184084.jpg" alt="Business"></div>
+  <div><img src="images/auto_000015122619.jpg" alt="Auto"></div>
+  <div><img src="images/farm_000017391831.jpg" alt="Farm"></div>
+  <div><img src="images/home_000014471914.jpg" alt="Home"></div>
+  <!-- <div><img src="http://placehold.it/1200x590/2ac9d5/ffffff" alt="Placeholder Image"></div> -->
 </div>
 
   <div class="o-niches u-hidden@print">
   <ul class="o-niches__list">
     
 
-<li class="c-card c-card--Auto">
-  <a class="c-card__link" href="#" style="background-image: url('http://placehold.it/470x186/728fb3/ffffff')">
+<li class="c-card c-card--Your Auto">
+  <a class="c-card__link" href="#" style="background-image: url(images/auto_000015122619.jpg)">
     <span class="c-card__wrap">
-      <h3 class="c-card__name">Auto</h3>
+      <h3 class="c-card__name">Your Auto</h3>
       <span class="c-button" role="button">Get a Quote</span>
     </span>
   </a>
@@ -136,10 +144,10 @@
 
     
 
-<li class="c-card c-card--Home">
-  <a class="c-card__link" href="#" style="background-image: url('http://placehold.it/470x186/358502/ffffff')">
+<li class="c-card c-card--Your Home">
+  <a class="c-card__link" href="#" style="background-image: url(images/home_000014471914.jpg)">
     <span class="c-card__wrap">
-      <h3 class="c-card__name">Home</h3>
+      <h3 class="c-card__name">Your Home</h3>
       <span class="c-button" role="button">Get a Quote</span>
     </span>
   </a>
@@ -147,10 +155,10 @@
 
     
 
-<li class="c-card c-card--Lifestyle">
-  <a class="c-card__link" href="#" style="background-image: url('http://placehold.it/470x186/4a5609/ffffff')">
+<li class="c-card c-card--Your Lifestyle">
+  <a class="c-card__link" href="#" style="background-image: url(images/lifestyle_000008545106.jpg)">
     <span class="c-card__wrap">
-      <h3 class="c-card__name">Lifestyle</h3>
+      <h3 class="c-card__name">Your Lifestyle</h3>
       <span class="c-button" role="button">Get a Quote</span>
     </span>
   </a>
@@ -158,10 +166,10 @@
 
     
 
-<li class="c-card c-card--Business">
-  <a class="c-card__link" href="#" style="background-image: url('http://placehold.it/470x186/1382ed/ffffff')">
+<li class="c-card c-card--Your Business">
+  <a class="c-card__link" href="#" style="background-image: url(images/business_000019184084.jpg)">
     <span class="c-card__wrap">
-      <h3 class="c-card__name">Business</h3>
+      <h3 class="c-card__name">Your Business</h3>
       <span class="c-button" role="button">Get a Quote</span>
     </span>
   </a>
@@ -169,10 +177,10 @@
 
     
 
-<li class="c-card c-card--Farm">
-  <a class="c-card__link" href="#" style="background-image: url('http://placehold.it/470x186/86fc61/ffffff')">
+<li class="c-card c-card--Your Farm">
+  <a class="c-card__link" href="#" style="background-image: url(images/farm_000017391831.jpg)">
     <span class="c-card__wrap">
-      <h3 class="c-card__name">Farm</h3>
+      <h3 class="c-card__name">Your Farm</h3>
       <span class="c-button" role="button">Get a Quote</span>
     </span>
   </a>
@@ -286,7 +294,6 @@
 </footer>
 
 
-    <a class="exit-off-canvas"></a>
 
   </div>
 </div>

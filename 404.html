@@ -31,7 +31,6 @@
 
   
     <div class="off-canvas-wrap" data-offcanvas>
-  <div class="inner-wrap">
 
     <!-- Off Canvas Menu -->
     <aside
@@ -40,20 +39,25 @@
     
     >
         <ul class="off-canvas-list">
-          <li><a href="/">Home</a></li>
-<li><a href="/personal">Personal</a></li>
-<li class="has-dropdown has-submenu">
-  <a href="/business">Business</a>
-  <ul class="dropdown left-submenu">
-    <li class="back"><a href="#">Back</a></li>
+          <li><a href="#">Home</a></li>
+<li><a href="#">Personal</a></li>
+<li><a href="#" class="off-canvas-submenu-call">Business <span class="right"> + </span></a>
+  <ul class="off-canvas-submenu">
     <li class=""><a href="/articles/auto-insurance">Auto Insurance</a></li>
     <li><a href="#">Active link in dropdown</a></li>
   </ul>
 </li>
+<li><a href="#">Research Center</a></li>
+<li><a href="#">Client Service</a></li>
+<li><a href="#">Contact Us</a></li>
 
 
         </ul>
     </aside>
+
+    <a class="exit-off-canvas"></a>
+
+  <div class="inner-wrap">
 
     <header class="o-banner js-banner u-hidden@print" role="banner">
   <div class="u-row" data-equalizer>
@@ -71,9 +75,9 @@
     </a>
     <span class="c-navigation__phone@md">Call (800) 811-5841</span>
   </div>
-  <ul class="c-navigation@lg">
+  <ul class="c-navigation@md">
     <li><a class="" href="/client-service/claims">Claims</a></li>
-<li><a class="" href="/contact-us/about">About</a></li>
+<li><a class="" href="#">About</a></li>
 
 
   </ul>
@@ -195,7 +199,6 @@
 </footer>
 
 
-    <a class="exit-off-canvas"></a>
 
   </div>
 </div>

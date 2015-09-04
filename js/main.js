@@ -8,6 +8,13 @@ $(document).ready(function() {
     }
   });
 
+  $('.off-canvas-submenu').hide();
+  $('.off-canvas-submenu-call').click(function() {
+    var icon = $(this).next('.off-canvas-submenu').is(':visible') ? '+' : '-';
+    $(this).next('.off-canvas-submenu').slideToggle('fast');
+    $(this).find('span').text(icon);
+  });
+
   // Headroom
   $('body').addClass('js-headroom');
   $('.js-banner').headroom({
@@ -22,16 +29,16 @@ $(document).ready(function() {
     // },
     // css classes to apply
     classes: {
-        // when element is initialised
-        initial: 'js-banner',
-        // when scrolling up
-        pinned: 'js-banner--pinned',
-        // when scrolling down
-        unpinned: 'js-banner--unpinned',
-        // when above offset
-        top: 'js-banner--top',
-        // when below offset
-        notTop: 'js-banner--not-top'
+      // when element is initialised
+      initial: 'js-banner',
+      // when scrolling up
+      pinned: 'js-banner--pinned',
+      // when scrolling down
+      unpinned: 'js-banner--unpinned',
+      // when above offset
+      top: 'js-banner--top',
+      // when below offset
+      notTop: 'js-banner--not-top'
     }
     // element to listen to scroll events on, defaults to `window`
     // scroller : someElement,
