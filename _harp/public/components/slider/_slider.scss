@@ -1,4 +1,5 @@
 .c-slider {
+  background-color: $primary-color;
   margin-bottom: 1.5em;
   position: absolute;
   top: 0;
@@ -14,7 +15,7 @@
     }
 
     &-track {
-      max-height: 334px + 150px;
+      max-height: 596px;
       overflow: hidden;
 
       @media #{$medium-up} {
@@ -24,9 +25,13 @@
     }
 
     &-slide img {
-      max-height: 496px;
+      height: 519px;
+      margin-left: -26%;
 
       @media #{$medium-up} {
+        height: auto;
+        margin-left: 0;
+        margin-top: -7%;
         width: 100%;
       }
 

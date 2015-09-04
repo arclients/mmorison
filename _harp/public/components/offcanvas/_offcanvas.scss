@@ -1,7 +1,13 @@
 // Offcanvas
-
 .off-canvas-list > li > a {
   font-size: rem-calc(22);
+}
+
+.off-canvas-submenu {
+  @extend %no-bullet;
+  .off-canvas-list & a {
+    padding: .25rem 1.25rem;
+  }
 }
 
 .menu-icon {

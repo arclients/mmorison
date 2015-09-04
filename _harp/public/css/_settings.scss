@@ -815,8 +815,8 @@ $include-html-off-canvas-classes: true;
 // Off Canvas Menu Variables
 // $off-canvas-width: rem-calc(250);
 $off-canvas-bg: $white;
-// $off-canvas-bg-hover: scale-color($tabbar-bg, $lightness: -30%);
-// $off-canvas-bg-active: scale-color($tabbar-bg, $lightness: -30%);
+$off-canvas-bg-hover: darken($white, 3%);
+$off-canvas-bg-active: darken($white, 5%);
 
 // Off Canvas Menu List Variables
 // $off-canvas-label-padding: .3rem rem-calc(15);
@@ -858,7 +858,7 @@ $off-canvas-back-hover-border-bottom: none;
 // $off-canvas-overlay-cursor: pointer;
 // $off-canvas-overlay-box-shadow: -4px 0 4px rgba($black, .5), 4px 0 4px rgba($black, .5);
 $off-canvas-overlay-background: rgba($black, .6);
-// $off-canvas-overlay-background-hover: rgba($white, .05);
+$off-canvas-overlay-background-hover: rgba($black, .6);
 
 // Transition Variables
 // $menu-slide: "transform 500ms ease";

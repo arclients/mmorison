@@ -1,5 +1,5 @@
 .c-navigation {
-  @extend %medium-5;
+  @extend %medium-6;
   @extend %medium-text-right;
   @extend %text-center;
   @media #{$small-only} {
@@ -14,7 +14,15 @@
   &\@md {
     @extend %show-for-medium-up;
     @extend %inline-list;
-    @media #{$medium-up} {
+    @media #{$medium-only} {
+      @media #{$landscape} {
+        display: inline;
+      }
+      @media #{$portrait} {
+        display: none;
+      }
+    }
+    @media #{$large-up} {
       display: inline;
     }
   }
@@ -22,9 +30,7 @@
   &\@lg {
     @extend %show-for-large-up;
     @extend %inline-list;
-    @media #{$large-up} {
-      display: inline;
-    }
+    @media #{$large-up} { display: inline; }
   }
 
   &__phone {
