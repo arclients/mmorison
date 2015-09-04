@@ -1,5 +1,10 @@
 <li><a href="#">Home</a></li>
-<li><a href="#">Personal</a></li>
+<li><a href="#" class="off-canvas-submenu-call">Personal <span class="right"> + </span></a>
+  <ul class="off-canvas-submenu">
+    <li class="<%= current.source=='auto-insurance'?'active':'' %>"><a href="/articles/auto-insurance">Auto Insurance</a></li>
+    <li class="<%= current.source=='boat-insurance'?'active':'' %>"><a href="#">Boat Insurance</a></li>
+  </ul>
+</li>
 <li><a href="#" class="off-canvas-submenu-call">Business <span class="right"> + </span></a>
   <ul class="off-canvas-submenu">
     <li class="<%= current.source=='auto-insurance'?'active':'' %>"><a href="/articles/auto-insurance">Auto Insurance</a></li>
