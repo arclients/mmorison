@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+  .wf-loading & {
+    font-family: "Helvetica", "Arial", sans-serif;
+    visibility: hidden;
+  }
+
+  .wf-active & { font-family: "futura-pt", sans-serif; }
+
+  .wf-active &,
+  .wf-inactive & { visibility: visible; }
+
+}
+
+.js-headroom {
+  margin-top: 92px;
+
+  @media #{$medium-up} { margin-top: 94px; }
+}
+
+.js-banner {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: transform 200ms ease-in-out;
+  z-index: 10;
+
+  &--pinned { transform: translateY(0%); }
+  &--unpinned { transform: translateY(-100%); }
+}
+

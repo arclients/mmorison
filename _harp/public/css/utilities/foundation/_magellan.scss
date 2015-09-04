@@ -1,0 +1,16 @@
+%magellan-expedition {
+  background: $magellan-bg;
+  min-width: 100%;
+  padding: $magellan-padding;
+  z-index: 50;
+
+  .sub-nav {
+    margin-bottom: 0;
+    dd { margin-bottom: 0; }
+    a {
+      line-height: 1.8em;
+    }
+  }
+}
+
+%magellan-expedition-clone { @extend %magellan-expedition; }

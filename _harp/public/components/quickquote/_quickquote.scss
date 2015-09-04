@@ -1,0 +1,42 @@
+body .c-quick-quote {
+  @extend %medium-6;
+
+  h2 {
+    color: $white;
+    font-size: rem-calc(37);
+  }
+
+  &__postal { @extend %small-5; }
+
+  &__niches {
+    @extend %small-6;
+    @extend %small-push-1;
+  }
+
+  &__button {
+    @extend %button--success;
+    @extend %button--expand;
+    border-radius: 6px;
+    color: $black;
+  }
+
+  &--modal {
+    background-color: transparentize($primary-color, .2);
+    height: 334px;
+    margin-top: 185px;
+    padding: 25px 1em;
+    position: relative;
+    z-index: 5;
+
+    @media #{$medium-up} {
+      margin-top: 0;
+      padding-top: 50px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    @media #{$large-up} { padding-top: 75px; }
+
+  }
+}

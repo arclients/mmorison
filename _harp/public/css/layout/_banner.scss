@@ -1,0 +1,31 @@
+.o-banner {
+  background-color: $white;
+  border-bottom: 1px solid $grey;
+
+  .u-row {
+    padding: 10px 0;
+    @media #{$medium-up} { padding: 15px 0; }
+  }
+
+}
+
+.o-brand {
+  @extend %small-7;
+  @extend %medium-7;
+  @extend %medium-text-left;
+  @extend %text-center;
+  overflow: hidden;
+  user-select: none;
+
+  img {
+    height: 74px;
+    @media #{$small-only} {
+      min-width: 172px;
+      height: auto;
+      padding: 9px 0;
+    }
+    @media #{$medium-up} { height: 63px; }
+  }
+
+}
+

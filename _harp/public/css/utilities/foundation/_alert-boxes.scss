@@ -1,0 +1,12 @@
+%alert-box { @include alert; }
+%alert-box-close { @include alert-close; }
+
+%alert-box-radius { @include radius($alert-radius); }
+%alert-box-round { @include radius($global-rounded); }
+
+%alert-box-success { @include alert-style($success-color); }
+%alert-box-alert { @include alert-style($alert-color); }
+%alert-box-secondary { @include alert-style($secondary-color); }
+%alert-box-warning { @include alert-style($warning-color); }
+%alert-box-info { @include alert-style($info-color); }
+%alert-close { opacity: 0; }

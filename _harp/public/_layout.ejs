@@ -1,0 +1,19 @@
+<%- partial("partials/_head") %>
+
+  <% if(offcanvas == true) { %>
+    <%- partial("components/offcanvas/_offcanvas") %>
+  <% } else { %>
+
+    <%- partial("partials/_banner") %>
+
+    <div class="s-cms-content s-cms-content--layout">
+      <section class="main" role="main">
+        <%- yield %>
+      </section>
+    </div>
+
+    <%- partial("partials/_contentinfo") %>
+
+  <% } %>
+
+<%- partial("partials/_body-bottom") %>

@@ -1,0 +1,135 @@
+%off-canvas-wrap { @include off-canvas-wrap; }
+%inner-wrap { @include inner-wrap; }
+
+%tab-bar {
+  @include tab-bar-base;
+
+  .menu-icon {
+    color: $tabbar-menu-icon-color;
+    display: block;
+    height: $tabbar-menu-icon-height;
+    padding: $tabbar-menu-icon-padding;
+    position: relative;
+    text-indent: $tabbar-menu-icon-text-indent;
+    transform: translate3d(0,0,0);
+    width: $tabbar-menu-icon-width;
+    @include hamburger($tabbar-hamburger-icon-width, $tabbar-hamburger-icon-left, $tabbar-hamburger-icon-top, $tabbar-hamburger-icon-thickness, $tabbar-hamburger-icon-gap, $tabbar-menu-icon-color, $tabbar-menu-icon-hover, true)
+  }
+
+}
+
+%left-small { @include tabbar-small-section($position: left); }
+%right-small { @include tabbar-small-section($position: right); }
+
+%tab-bar-section { @include tab-bar-section; }
+
+// MENU BUTTON
+// This is a little bonus. You don't need it for off canvas to work. Mixins to be written in the future.
+%left-off-canvas-menu {
+  @include off-canvas-menu($position: left);
+
+  @if $text-direction == rtl {
+    ul.off-canvas-list li.has-submenu > a:before {
+      @include icon-double-arrows($position: left);
+    }
+  } @else {
+    ul.off-canvas-list li.has-submenu > a:after {
+      @include icon-double-arrows($position: right);
+    }
+  }
+
+}
+
+%right-off-canvas-menu {
+  @include off-canvas-menu($position: right);
+
+  @if $text-direction == rtl {
+    .right-off-canvas-menu ul.off-canvas-list li.has-submenu > a:after {
+      @include icon-double-arrows($position: right);
+    }
+  } @else {
+    .right-off-canvas-menu ul.off-canvas-list li.has-submenu > a:before {
+      @include icon-double-arrows($position: left);
+    }
+  }
+
+}
+
+%off-canvas-list { @include off-canvas-list; }
+
+
+// ANIMATION CLASSES
+// These classes are added with JS and trigger the actual animation.
+%move-right {
+  > .inner-wrap {
+    @include translate3d($off-canvas-width,0,0);
+  }
+  .exit-off-canvas { @include back-link;}
+}
+
+%move-left {
+  > .inner-wrap {
+    @include translate3d(-($off-canvas-width),0,0);
+
+  }
+  .exit-off-canvas { @include back-link; }
+}
+
+%offcanvas-overlap {
+  .left-off-canvas-menu, .right-off-canvas-menu {
+    -ms-transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform: none;
+    z-index: 1003;
+  }
+  .exit-off-canvas { @include back-link; }
+}
+
+%offcanvas-overlap-left {
+  .right-off-canvas-menu {
+    -ms-transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform: none;
+    z-index: 1003;
+  }
+  .exit-off-canvas { @include back-link; }
+}
+
+%offcanvas-overlap-right {
+  .left-off-canvas-menu {
+    -ms-transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform: none;
+    z-index: 1003;
+  }
+  .exit-off-canvas { @include back-link; }
+}
+
+// Older browsers
+%no-csstransforms {
+  .left-off-canvas-menu { left: -($off-canvas-width); }
+  .right-off-canvas-menu { right: -($off-canvas-width); }
+
+  .move-left > .inner-wrap { right: $off-canvas-width; }
+  .move-right > .inner-wrap { left: $off-canvas-width; }
+}
+
+%left-submenu {
+  @include off-canvas-submenu($position: left);
+  &.move-right, &.offcanvas-overlap-right, &.offcanvas-overlap {
+    @include translate3d(0%,0,0);
+  }
+}
+
+%right-submenu {
+  @include off-canvas-submenu($position: right);
+  &.move-left, &.offcanvas-overlap-left, &.offcanvas-overlap {
+    @include translate3d(0%,0,0);
+  }
+}

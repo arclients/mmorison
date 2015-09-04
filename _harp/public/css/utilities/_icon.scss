@@ -1,0 +1,16 @@
+%icon-parent {
+  cursor: pointer;
+  display: inline-block;
+  width: 50px;
+
+  span { font-size: 30px; }
+
+}
+
+%icon {
+  border-radius: 50%;
+  display: inline-block;
+  height: 43px;
+  width: 43px;
+}
+

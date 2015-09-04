@@ -1,0 +1,46 @@
+$align-class-names:
+  small-only,
+  small,
+  medium-only,
+  medium,
+  large-only,
+  large,
+  xlarge-only,
+  xlarge,
+  xxlarge-only,
+  xxlarge;
+
+$align-class-breakpoints:
+  $small-only,
+  $small-up,
+  $medium-only,
+  $medium-up,
+  $large-only,
+  $large-up,
+  $xlarge-only,
+  $xlarge-up,
+  $xxlarge-only,
+  $xxlarge-up;
+
+%text-left { text-align: left; }
+%text-right { text-align: right; }
+%text-center { text-align: center; }
+%text-justify { text-align: justify; }
+
+@for $i from 1 through length($align-class-names) {
+  @media #{(nth($align-class-breakpoints, $i))} {
+    %#{(nth($align-class-names, $i))}-text-left { text-align: left; }
+    %#{(nth($align-class-names, $i))}-text-right { text-align: right; }
+    %#{(nth($align-class-names, $i))}-text-center { text-align: center; }
+    %#{(nth($align-class-names, $i))}-text-justify { text-align: justify; }
+  }
+}
+
+%lead { @include lead; }
+
+%subheader { @include subheader; }
+
+%no-bullet {
+  list-style: none;
+  margin-left: 0;
+}

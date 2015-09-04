@@ -1,0 +1,13 @@
+%breadcrumbs {
+  @include crumb-container;
+  @include radius($crumb-radius);
+
+  > * {
+    @include crumbs;
+  }
+
+  [aria-label="breadcrumbs"] [aria-hidden="true"]:after {
+    content: '/';
+  }
+
+}

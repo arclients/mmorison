@@ -1,0 +1,67 @@
+.c-navigation {
+  @extend %medium-5;
+  @extend %medium-text-right;
+  @extend %text-center;
+  @media #{$small-only} {
+    position: relative;
+    top: 4px;
+  }
+  @media #{$medium-up} {
+    margin-bottom: -19px;
+    margin-top: 19px;
+  }
+
+  &\@md {
+    @extend %show-for-medium-up;
+    @extend %inline-list;
+    @media #{$medium-up} {
+      display: inline;
+    }
+  }
+
+  &\@lg {
+    @extend %show-for-large-up;
+    @extend %inline-list;
+    @media #{$large-up} {
+      display: inline;
+    }
+  }
+
+  &__phone {
+    display: inline-block;
+    font-weight: bold;
+
+    @media #{$small-only} {
+      font-size: rem-calc(26);
+      line-height: 1;
+    }
+
+    @media #{$medium-up} {
+      display: inline;
+      float: left;
+    }
+
+    &\@md { @extend %show-for-medium-up; }
+
+    &\@sm {
+      @extend %show-for-small-only;
+      @extend %icon-parent;
+      color: $grey;
+
+      i {
+        @extend %icon;
+        border: 1px solid $grey;
+        padding-top: 7px;
+      }
+
+      span {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: normal;
+      }
+
+    }
+
+  }
+
+}

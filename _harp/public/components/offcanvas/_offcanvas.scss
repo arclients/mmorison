@@ -1,0 +1,52 @@
+// Offcanvas
+
+.off-canvas-list > li > a {
+  font-size: rem-calc(22);
+}
+
+.menu-icon {
+  @extend %icon-parent;
+  @include hamburger($tabbar-hamburger-icon-width, $tabbar-hamburger-icon-left, $tabbar-hamburger-icon-top, $tabbar-hamburger-icon-thickness, $tabbar-hamburger-icon-gap, $primary-color, $tabbar-menu-icon-hover, true);
+  color: $primary-color;
+  font-size: 14px;
+  position: relative;
+  @media #{$medium-up} {
+    border: 1px solid $primary-color;
+    border-radius: 30px;
+    line-height: 1.5;
+    margin-top: -10px;
+    min-width: 94px;
+    padding: 9px 12px 9px 0;
+    transition-duration: .3s;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $white;
+
+      span::after { box-shadow: 0 0 0 1px $white, 0 7px 0 1px $white, 0 14px 0 1px $white; }
+    }
+  }
+
+  span {
+    @extend %icon;
+    border: 1px solid $primary-color;
+
+    @media #{$medium-up} {
+      border: 0;
+      height: auto;
+      width: auto;
+    }
+
+    &::after {
+      left: 17px;
+      top: 22px;
+      transition-duration: .3s;
+
+      @media #{$medium-up} {
+        left: 15px;
+        top: 21px;
+      }
+    }
+  }
+}
+

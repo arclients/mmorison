@@ -1,0 +1,128 @@
+.o-footer {
+
+  // Section Objects
+  &__middle {
+    @extend %t-panel;
+    padding: 2em 0 1em;
+
+    @media #{$small-only} { padding: 1em 1em 0; }
+  }
+
+  &__bottom {
+    @extend %t-panel;
+
+    a { color: $blue--light; }
+  }
+
+  // Objects
+  &__companies {
+    @extend %small-12;
+    @extend %t-panel--light;
+    @extend %text-center;
+    padding: 2em 0 3em;
+
+    h3 {
+      color: $jet--light;
+      margin-bottom: .5em;
+    }
+
+    img {
+      border-radius: 50%;
+      margin: 0 .5em 1em;
+    }
+  }
+
+  &__catch {
+    @extend %small-12;
+    padding: 2.5em;
+
+    @media #{$medium-up} { text-align: center; }
+
+    h4 {
+      display: inline-block;
+      font-size: rem-calc(44);
+      line-height: 1;
+    }
+
+    [role="button"] {
+      @extend %button--success;
+      color: $black;
+
+      @media #{$small-only} {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+      }
+
+      @media #{$medium-only} {
+        @media #{$portrait} {
+          padding-left: 0;
+          padding-right: 0;
+          width: 35%;
+        }
+      }
+
+      @media #{$large-up} { float: right; }
+    }
+  }
+
+  &__social {
+    @extend %medium-4;
+    @extend %medium-text-right;
+
+    ul { @extend %inline-list; }
+
+    li {
+      @media #{$small-only} {
+        margin-left: 0 !important;
+        margin-right: 1.375rem;
+      }
+    }
+
+    a {
+      font-size: 45px;
+      line-height: .1;
+    }
+  }
+
+  &__companyinfo { @extend %medium-4; }
+
+  &__logo { margin-bottom: 1.5em; }
+
+  &__widget {
+    @extend %medium-4;
+
+    h6 { text-transform: uppercase; }
+
+    &__list {
+      @extend %no-bullet;
+
+      li {
+        border-top: transparentize($white, .75) 1px solid;
+
+        &:first-child { border-top: inherit; }
+      }
+
+      a {
+        color: $white;
+        display: inline-block;
+        font-size: 14px;
+        padding: .75em 0;
+      }
+    }
+  }
+
+  &__credit {
+    @extend %medium-8;
+
+    .copyright { font-size: rem-calc(10); }
+  }
+
+  &__address {
+    &__list {
+      @extend %no-bullet;
+      font-size: 13px;
+    }
+  }
+}
+

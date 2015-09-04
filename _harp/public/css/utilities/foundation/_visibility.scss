@@ -1,0 +1,98 @@
+//
+// Media Class Names
+//
+// Visibility Breakpoints
+$visibility-breakpoint-sizes:
+  small,
+  medium,
+  large,
+  xlarge,
+  xxlarge;
+
+$visibility-breakpoint-queries:
+  unquote($small-up),
+  unquote($medium-up),
+  unquote($large-up),
+  unquote($xlarge-up),
+  unquote($xxlarge-up);
+
+%show-for-landscape { display: inherit !important; }
+%hide-for-portrait { @extend %show-for-landscape; }
+%hide-for-landscape { display: none !important; }
+%show-for-portrait { @extend %hide-for-landscape; }
+
+%show-for-landscape {
+  @media #{$landscape} {
+    display: inherit !important;
+  }
+}
+
+%hide-for-portrait { @extend %show-for-landscape; }
+
+%hide-for-landscape {
+  @media #{$landscape} {
+    display: none !important;
+  }
+}
+
+%show-for-portrait { @extend %hide-for-landscape; }
+
+%show-for-portrait {
+  @media #{$portrait} {
+    display: inherit !important;
+  }
+}
+
+%hide-for-landscape { @extend %show-for-portrait; }
+
+%hide-for-portrait {
+  @media #{$portrait} {
+    display: none !important;
+  }
+}
+
+%show-for-landscape { @extend %hide-for-portrait; }
+
+// Touch-enabled device targeting
+%show-for-touch { display: none !important; }
+%hide-for-touch { display: inherit !important; }
+.touch .show-for-touch { @extend %hide-for-touch; }
+.touch .hide-for-touch { @extend %show-for-touch; }
+
+// Screen reader-specific classes
+%show-for-sr {
+  @include element-invisible;
+}
+
+%show-on-focus {
+  @include element-invisible;
+
+  &:focus,
+  &:active {
+    @include element-invisible-off;
+  }
+}
+
+%show-for-small-only {
+  @media #{$medium-up} { display: none !important; }
+}
+
+%show-for-medium-only {
+  @media #{$small-only} { display: none !important; }
+  @media #{$large-up} { display: none !important; }
+}
+
+%show-for-large-only {
+  @media #{$small-only} { display: none !important; }
+  @media #{$medium-only} { display: none !important; }
+  @media #{$xlarge-up} { display: none !important; }
+}
+
+%show-for-medium-up {
+  @media #{$small-only} { display: none !important; }
+}
+
+%show-for-large-up {
+  @media #{$small-only} { display: none !important; }
+  @media #{$medium-only} { display: none !important; }
+}

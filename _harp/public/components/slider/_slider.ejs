@@ -1,0 +1,10 @@
+<% function randHex() {
+  out = Math.floor(Math.random()*16777215).toString(16);
+  return out;
+} %>
+
+<div class="c-slider js-slider u-hidden@print">
+  <div><img src="http://placehold.it/1200x534/<%- randHex() %>/ffffff" alt=""></div>
+  <div><img src="http://placehold.it/1200x534/<%- randHex() %>/ffffff" alt=""></div>
+  <div><img src="http://placehold.it/1200x534/<%- randHex() %>/ffffff" alt=""></div>
+</div>

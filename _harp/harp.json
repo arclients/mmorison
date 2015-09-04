@@ -1,0 +1,24 @@
+{
+  "_basicAuth": ["user:pass"],
+  "globals": {
+    "title": "Stewart Morrison",
+    "author": "Agency Revolution",
+    "authorUrl": "www.agencyrevolution.com",
+    "description": "We protect what matters most",
+    "phone": "(800) 811-5841",
+    "address": "158 Lindsay Street South",
+    "city": "Lindsay",
+    "state": "ON",
+    "postal": "705 324 6681",
+    "facebookUser": "pages/Stewart-Morrison-Insurance/195630117185107",
+    "twitterUser": "smibrokers",
+    "linkedinUser": "stewart-morrison-insurance-brokers-ltd-",
+    "googlePlusUser": "116859789766163366728",
+    "offcanvas": true,
+    "offcanvasPosition": "right",
+    "tabBar": false
+  },
+  "service": {
+    "analytics": "UA-"
+  }
+}

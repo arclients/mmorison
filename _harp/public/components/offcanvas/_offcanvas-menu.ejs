@@ -1,0 +1,23 @@
+<% if(offcanvas == true) { %>
+
+  <% if(tabBar == false) { %>
+  <% } else { %>
+    <div class="tab-bar">
+  <% } %>
+
+  <a role="button"
+    <% if(offcanvasPosition == "left") { %>
+      class="left-off-canvas-toggle menu-icon"
+    <% } else if (offcanvasPosition == "right") { %>
+      class="right-off-canvas-toggle menu-icon"
+    <% } else { %>
+      class="left-off-canvas-toggle menu-icon"
+    <% } %>
+    href="#" ><span></span> Menu</a>
+
+  <% if(tabBar == false) { %>
+  <% } else { %>
+    </div>
+  <% } %>
+
+<% } %>

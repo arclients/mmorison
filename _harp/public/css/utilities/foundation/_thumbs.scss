@@ -1,0 +1,7 @@
+/* Image Thumbnails */
+%th {
+  @include thumb;
+  @include single-transition(all, $thumb-transition-speed, ease-out);
+
+  &.radius { @include radius($thumb-radius); }
+}

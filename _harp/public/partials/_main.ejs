@@ -1,0 +1,16 @@
+<section class="o-main" role="main">
+  <div id="TopPane class="o-top">
+    <%- partial("_top") %>
+  </div>
+  <div class="u-row">
+    <div id="AsidePane" class="aside" role="complementary">
+      <%- partial("_aside") %>
+    </div>
+    <div id="ContentPane" class="content">
+      <%- yield %>
+    </div>
+  </div>
+  <div id="BottomPane" class="bottom" runat="server">
+    <%- partial("_bottom") %>
+  </div>
+</section>

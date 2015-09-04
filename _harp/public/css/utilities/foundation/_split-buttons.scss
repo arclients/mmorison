@@ -1,0 +1,30 @@
+%split-button { @include split-button;
+
+  &.secondary {
+    @include split-button(false, $split-button-pip-color, $split-button-span-border-color, false);
+    @include split-button(false, $split-button-pip-color-alt, false, false);
+  }
+
+  &.alert { @include split-button(false, false, $split-button-span-border-color, false); }
+  &.success { @include split-button(false, false, $split-button-span-border-color, false); }
+
+  &.tiny { @include split-button(tiny, false, false, false); }
+  &.small { @include split-button(small, false, false, false); }
+  &.large { @include split-button(large, false, false, false); }
+  &.expand { padding-left: 2rem; }
+
+  &.radius span { @include side-radius($opposite-direction, $global-radius); }
+  &.round span { @include side-radius($opposite-direction, 1000px); }
+  &.no-pip {
+    span:before { border-style: none; }
+    span:after { border-style: none; }
+    span>i {
+      display: block;
+      left: 50%;
+      margin-left: -.28889em;
+      margin-top: -.48889em;
+      position: absolute;
+      top: 50%;
+    }
+  }
+}

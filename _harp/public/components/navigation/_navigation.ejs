@@ -1,0 +1,13 @@
+<div class="c-navigation" data-equalizer-watch>
+  <div class="c-navigation__phone">
+    <a class="c-navigation__phone@sm" href="tel:<%= phone %>">
+      <i class="fi-telephone"></i>
+      <span>Call</span>
+    </a>
+    <span class="c-navigation__phone@md">Call <%= phone %></span>
+  </div>
+  <ul class="c-navigation@lg">
+    <%- partial("../../partials/_menu-alt") %>
+  </ul>
+  <%- partial("../offcanvas/_offcanvas-menu") %>
+</div>

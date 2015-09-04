@@ -1,0 +1,25 @@
+.o-content-pane {
+  @extend %medium-8;
+  min-height: 25em;
+}
+
+.o-aside-pane {
+  @extend %medium-4;
+  @extend %right;
+  @media #{$medium-up} { padding-left: 20px; }
+
+  &.DNNEmptyPane + .o-content-pane {
+    @extend %medium-12;
+    border-right: 0;
+  }
+}
+
+.o-niches {
+
+  &__list {
+    @extend %small-block-grid-1;
+    @extend %medium-block-grid-5;
+    @extend %large-block-grid-5;
+  }
+}
+

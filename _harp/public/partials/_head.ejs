@@ -1,0 +1,32 @@
+<!doctype html>
+<html class="no-js <%= current.path[0] ? current.source : '' %>" lang="en-US">
+<head itemscope itemtype="http://schema.org/WebSite">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title itemprop="name"><%= title %></title>
+  <meta name="description" content="<%= description %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="dns-prefetch" href="https://use.typekit.net">
+  <link rel="stylesheet" href="css/main.css">
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'hzr5xwh',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+  <% if(environment == "production") { %>
+    <link rel="dns-prefetch" href="https://ajax.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" async></script>
+  <% } else { %>
+    <link href="fonts/foundation-icons/foundation-icons.css" rel="stylesheet">
+    <script src="js/vendor/modernizr.min.js" async></script>
+  <% } %>
+  <link id="favicon" rel="shortcut icon" type="image/x-icon" href="favicon.png">
+</head>
+<body>

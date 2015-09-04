@@ -1,0 +1,11 @@
+.top-bar {
+  user-select: none;
+
+  &-section {
+    .back { display: none; }
+  }
+
+}
+
+.parent-link { @extend %hide-for-medium-up; }
+

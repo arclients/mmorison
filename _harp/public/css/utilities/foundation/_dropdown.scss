@@ -1,0 +1,35 @@
+%f-dropdown {
+  @include dropdown-container(list, bottom);
+
+  &.drop-#{$opposite-direction} {
+    @include dropdown-container(list, #{$default-float});
+  }
+
+  &.drop-#{$default-float} {
+    @include dropdown-container(list, #{$opposite-direction});
+  }
+
+  &.drop-top {
+    @include dropdown-container(list, top);
+  }
+  // max-width: none;
+
+  li { @include dropdown-style; }
+
+  // You can also put custom content in these dropdowns
+  &.content { @include dropdown-container(content, $triangle:false); }
+
+  // Sizes
+  &.tiny { max-width: 200px; }
+  &.small { max-width: 300px; }
+  &.medium { max-width: 500px; }
+  &.large { max-width: 800px; }
+  &.mega {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    &.open {
+      left: 0 !important;
+    }
+  }
+}

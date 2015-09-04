@@ -1,0 +1,40 @@
+// Reveal Modals
+%reveal-modal-bg { @include reveal-bg; }
+
+%reveal-modal {
+  @include reveal-modal-base;
+  @include reveal-modal-style(
+    $bg:$reveal-modal-bg,
+    $padding:$reveal-modal-padding,
+    $border:true,
+    $box-shadow:true,
+    $radius:false,
+    $top-offset:$reveal-position-top
+  );
+
+  &.radius { @include reveal-modal-style($radius:true); }
+  &.round { @include reveal-modal-style($radius:$reveal-round); }
+  &.collapse { @include reveal-modal-style($padding:0); }
+  &.tiny { @include reveal-modal-base(false, 30%); }
+  &.small { @include reveal-modal-base(false, 40%); }
+  &.medium { @include reveal-modal-base(false, 60%); }
+  &.large { @include reveal-modal-base(false, 70%); }
+  &.xlarge { @include reveal-modal-base(false, 95%); }
+  &.full {
+    @include reveal-modal-base(false, 100%);
+    height: 100vh;
+    height: 100%;
+    left: 0;
+    margin-left: 0 !important;
+    max-width: none !important;
+    min-height: 100vh;
+    top: 0;
+  }
+
+  // Modals pushed to back
+  &.toback {
+    z-index: $z-index-base - 2;
+  }
+
+  .#{$close-reveal-modal-class} { @include reveal-close; }
+}

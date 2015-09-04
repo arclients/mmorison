@@ -1,0 +1,13 @@
+<% function randHex() {
+  out = Math.floor(Math.random()*16777215).toString(16);
+  return out;
+} %>
+
+<li class="c-card c-card--<%- name %>">
+  <a class="c-card__link" href="#" style="background-image: url('http://placehold.it/470x186/<%- randHex() %>/ffffff');">
+    <span class="c-card__wrap">
+      <h3 class="c-card__name"><%- name %></h3>
+      <span class="c-button" role="button"><%- action %></span>
+    </span>
+  </a>
+</li>

@@ -1,0 +1,49 @@
+.c-card {
+  $card--color: $primary-color;
+  @extend %text-center;
+
+  &__link {
+    background-color: $card--color;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    margin-bottom: 1em;
+    overflow: hidden;
+    padding-top: 173px;
+    width: 90%;
+
+    @media #{$small-only} { margin: 1em auto .25em; }
+
+    @media #{$medium-up} {
+      background-position: 50% 0;
+      background-size: initial;
+      display: inline-block;
+      max-width: 183px;
+    }
+  }
+
+  &__wrap {
+    background-color: $card--color;
+    display: block;
+  }
+
+  &__name {
+    color: $white;
+    font-size: rem-calc(27);
+    margin-top: .5em;
+    min-height: 80px;
+    padding-top: .25em;
+
+    @media #{$small-only} { font-size: rem-calc(33); }
+    @media #{$medium-only} { @media #{$portrait} { font-size: rem-calc(22); } }
+  }
+
+  .c-button {
+    @extend %button--small;
+    @extend %button--tiny\@md;
+    background-color: $white;
+    color: $card--color;
+    font-weight: bold;
+  }
+}

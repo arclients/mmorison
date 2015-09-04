@@ -1,0 +1,12 @@
+%pagination {
+  @include pagination;
+}
+
+// Pagination centred wrapper
+%pagination-centered {
+  @include pagination-container(true);
+
+  ul {
+    @include pagination(true, false);
+  }
+}

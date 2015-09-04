@@ -1,0 +1,37 @@
+.c-slider {
+  margin-bottom: 1.5em;
+  position: absolute;
+  top: 0;
+
+  @media #{$medium-up} {
+    position: relative;
+  }
+
+  .slick {
+
+    &-list {
+      @extend %small-row;
+    }
+
+    &-track {
+      max-height: 334px + 150px;
+      overflow: hidden;
+
+      @media #{$medium-up} {
+        max-height: 334px;
+      }
+
+    }
+
+    &-slide img {
+      max-height: 496px;
+
+      @media #{$medium-up} {
+        width: 100%;
+      }
+
+    }
+
+  }
+
+}
