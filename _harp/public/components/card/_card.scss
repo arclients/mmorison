@@ -21,11 +21,19 @@
       display: inline-block;
       max-width: 183px;
     }
+
+    &:hover {
+      .c-card__wrap {
+        background-color: darken($card--color, 10%);
+      }
+    }
+
   }
 
   &__wrap {
     background-color: $card--color;
     display: block;
+    transition-duration: .5s;
   }
 
   &__name {
@@ -45,5 +53,12 @@
     background-color: $white;
     color: $card--color;
     font-weight: bold;
+
+    &,
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: $card--color;
+    }
   }
 }

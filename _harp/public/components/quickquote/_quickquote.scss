@@ -14,6 +14,7 @@ body .c-quick-quote {
   }
 
   &__button {
+    @extend %button;
     @extend %button--success;
     @extend %button--expand;
     border-radius: 6px;
@@ -22,15 +23,15 @@ body .c-quick-quote {
 
   &--modal {
     background-color: transparentize($primary-color, .2);
-    height: 334px;
-    margin-top: 185px;
-    padding: 25px 1em;
-    position: relative;
+    bottom: 0;
+    max-height: 334px;
+    padding: 15px 1em;
+    position: absolute;
     z-index: 5;
 
     @media #{$medium-up} {
       margin-top: 0;
-      padding-top: 50px;
+      padding: 50px 1em 25px;
       position: absolute;
       right: 0;
       top: 0;

@@ -1,6 +1,12 @@
 $(document).ready(function() {
   'use strict';
 
+  var iOS = navigator.userAgent.match(/(iPad|iPhone|iPod)/g);
+
+  if (iOS && $('.o-top-pane').css('min-height') == '84vh') {
+    $('.o-top-pane').css('min-height', '0');
+  }
+
   // Foundation
   $(document).foundation({
     offcanvas: {
@@ -9,11 +15,13 @@ $(document).ready(function() {
   });
 
   $('.off-canvas-submenu').hide();
+  $('.off-canvas-list li:first-child .off-canvas-submenu').show();
   $('.off-canvas-submenu-call').click(function() {
     var icon = $(this).next('.off-canvas-submenu').is(':visible') ? '+' : '-';
     $(this).next('.off-canvas-submenu').slideToggle('fast');
     $(this).find('span').text(icon);
   });
+  $('.off-canvas-list li:first-child .off-canvas-submenu span').text('-');
 
   // Headroom
   $('body').addClass('js-headroom');
@@ -75,7 +83,7 @@ $(document).ready(function() {
     // accessibility: true,
     // adaptiveHeight: true,
     autoplay: true,
-    // autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
     arrows: false,
     // asNavFor: '.some-class',
     // appendArrows: $(element),
@@ -128,7 +136,7 @@ $(document).ready(function() {
     // slidesPerRow: 1,
     // slidesToShow: 1,
     // slidesToScroll: 1,
-    // speed: 300,
+    speed: 3000,
     // swipe: true,
     // swipeToSlide: false,
     // touchMove: true,
@@ -139,5 +147,74 @@ $(document).ready(function() {
     // verticalSwiping: false,
     rtl: false
   });
+
+  $('.js-companies__slider').slick({
+    // accessibility: true,
+    // adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: false,
+    // asNavFor: '.some-class',
+    // appendArrows: $(element),
+    // prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+    // nextArrow: '<button type="button" class="slick-next">Next</button>',
+    // centerMode: false,
+    // centerPadding: '50px',
+    // cssEase: 'ease',
+    // customPaging: 'n/a',
+    dots: false,
+    // draggable: true,
+    // fade: true,
+    // focusOnSelect: false,
+    // easing: 'linear',
+    // edgeFriction: 0.15,
+    infinite: true,
+    // initialSlide: 0,
+    // lazyLoad: 'ondemand',
+    // mobileFirst: false,
+    // pauseOnHover: true,
+    // pauseOnDotsHover: false,
+    // respondTo: 'window',
+    responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }],
+    // rows: 1,
+    // slide: '',
+    // slidesPerRow: 1,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    speed: 3000,
+    // swipe: true,
+    // swipeToSlide: false,
+    // touchMove: true,
+    // touchThreshold: 5,
+    // useCSS: true,
+    // variableWidth: true,
+    // vertical: false,
+    // verticalSwiping: false,
+    rtl: false
+  });
+
 
 });

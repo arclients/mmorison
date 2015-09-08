@@ -15,23 +15,6 @@
   }
 
   // Objects
-  &__companies {
-    @extend %small-12;
-    @extend %t-panel--light;
-    @extend %text-center;
-    padding: 2em 0 3em;
-
-    h3 {
-      color: $jet--light;
-      margin-bottom: .5em;
-    }
-
-    img {
-      border-radius: 50%;
-      margin: 0 .5em 1em;
-    }
-  }
-
   &__catch {
     @extend %small-12;
     padding: 2.5em;
@@ -45,7 +28,9 @@
     }
 
     [role="button"] {
+      @extend %button;
       @extend %button--success;
+      border-radius: 6px;
       color: $black;
 
       @media #{$small-only} {

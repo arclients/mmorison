@@ -1,7 +1,7 @@
 NOW := $(shell date +"%c" | tr ' :' '__')
 
 edit:
-	cd _harp/public; vim
+	cd _harp; vim
 
 install:
 	cd _harp; npm install

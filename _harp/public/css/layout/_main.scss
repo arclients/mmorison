@@ -1,3 +1,15 @@
+.o-top-pane {
+  position: relative;
+  overflow: hidden;
+  min-height: 84vh;
+  @media #{$small-only} {
+    height: 290px;
+  }
+  @media #{$medium-up} {
+    min-height: 0;
+  }
+}
+
 .o-content-pane {
   @extend %medium-8;
   min-height: 25em;
@@ -23,3 +35,34 @@
   }
 }
 
+.o-companies {
+  @extend %small-12;
+  @extend %t-panel--light;
+  @extend %text-center;
+  padding: 2em 0 3em;
+
+  h3 {
+    color: $jet--light;
+    margin-bottom: .5em;
+  }
+
+  img {
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 .5em 1em;
+    opacity: .4;
+  }
+
+  .slick {
+    &-dots {
+      display: none !important;
+      list-style: none;
+
+      li {
+        display: inline;
+        margin: 0 10px;
+      }
+    }
+  }
+
+}
