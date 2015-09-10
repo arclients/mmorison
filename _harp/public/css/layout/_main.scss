@@ -11,19 +11,30 @@
 }
 
 .o-content-pane {
+  @extend %small-12;
   @extend %medium-8;
+  @extend %medium-pull-4;
   min-height: 25em;
 }
 
 .o-aside-pane {
+  @extend %small-12;
   @extend %medium-4;
-  @extend %right;
+  @extend %medium-push-8;;
   @media #{$medium-up} { padding-left: 20px; }
 
   &.DNNEmptyPane + .o-content-pane {
     @extend %medium-12;
+    right: 0; // reset pull
     border-right: 0;
   }
+}
+
+.o-feature {
+  $o-feature--padding: 130px;
+  @extend %t-panel;
+  padding-bottom: $o-feature--padding;
+  padding-top: $o-feature--padding;
 }
 
 .o-niches {
@@ -62,6 +73,43 @@
         display: inline;
         margin: 0 10px;
       }
+    }
+  }
+}
+
+// Quote Form
+.quotrr {
+
+  .locator,
+  .surveyor {
+    @extend %row;
+  }
+
+  .pusher {
+    @extend %button;
+    @extend %button--success;
+    @extend %button--expand;
+    border-radius: 6px;
+    color: $black;
+  }
+
+  .field { @extend %small-12; }
+
+  body & {
+    .firstName,
+    .lastName,
+    .city,
+    .state {
+      @extend %small-6;
+      @extend %medium-12;
+    }
+
+    .address { @extend %small-9; }
+
+    .addressAdv {
+      @extend %small-3;
+      position: relative;
+      top: 21px;
     }
   }
 

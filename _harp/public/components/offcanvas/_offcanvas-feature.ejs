@@ -1,0 +1,25 @@
+<div class="off-canvas-wrap" data-offcanvas>
+  <!-- Off Canvas Menu -->
+  <aside
+    <% if(offcanvasPosition == "left") { %> class="left-off-canvas-menu"
+    <% } else if (offcanvasPosition == "right") { %> class="right-off-canvas-menu"
+    <% } else { %> class="left-off-canvas-menu" <% } %>
+  >
+    <ul class="off-canvas-list"><%- partial("../../partials/_menu") %></ul>
+  </aside>
+  <a class="exit-off-canvas"></a>
+
+  <div class="inner-wrap">
+    <%- partial("../../partials/_banner") %>
+    <div class="o-feature">
+      <div class="o-feature__color"></div>
+      <h1><%= title %></h1>
+      <p class="subheader"><%= description %></p>
+      <div id="dnn_FeaturePane" class="o-feature-pane DNNEmptyPane"></div>
+    </div>
+    <div class="s-cms-content s-cms-content--layout">
+      <%- yield %>
+    </div>
+    <%- partial("../../partials/_contentinfo") %>
+  </div>
+</div>

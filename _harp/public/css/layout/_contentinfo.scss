@@ -55,7 +55,10 @@
     @extend %medium-4;
     @extend %medium-text-right;
 
-    ul { @extend %inline-list; }
+    ul {
+      @extend %inline-list;
+      @media #{$small-only} { margin-left: 0; }
+    }
 
     li {
       @media #{$small-only} {

@@ -1,0 +1,27 @@
+<!-- feature layout -->
+<%- partial("../partials/_head") %>
+
+  <% if(offcanvas == true) { %>
+    <%- partial("../components/offcanvas/_offcanvas-feature") %>
+  <% } else { %>
+
+    <%- partial("../partials/_banner") %>
+
+    <!-- o-feature-wrap -->
+    <div class="o-feature-wrap">
+      <div class="o-feature-wrap__color"></div>
+      <h1>Auto Insurance</h1>
+      <div id="dnn_FeaturePane" class="o-feature-pane DNNEmptyPane"></div>
+    </div>
+
+    <div class="s-cms-content s-cms-content--layout">
+      <section class="main" role="main">
+        <%- yield %>
+      </section>
+    </div>
+
+    <%- partial("../partials/_contentinfo") %>
+
+  <% } %>
+
+<%- partial("../partials/_body-bottom") %>
