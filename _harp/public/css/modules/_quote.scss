@@ -1,0 +1,37 @@
+// Quote Form
+.quotrr {
+
+  .locator,
+  .surveyor {
+    @extend %row;
+  }
+
+  .pusher {
+    @extend %button;
+    @extend %button--success;
+    @extend %button--expand;
+    border-radius: 6px;
+    color: $black;
+  }
+
+  .field { @extend %small-12; }
+
+  body & {
+    .firstName,
+    .lastName,
+    .city,
+    .state {
+      @extend %small-6;
+      @extend %medium-12;
+    }
+
+    .address { @extend %small-9; }
+
+    .addressAdv {
+      @extend %small-3;
+      position: relative;
+      top: 21px;
+    }
+  }
+
+}

@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js index" lang="en-US">
+<html class="no-js contact-us" lang="en-US">
 <head itemscope itemtype="http://schema.org/WebSite">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -113,132 +113,49 @@
 </header>
 
     <div class="s-cms-content s-cms-content--layout">
-      <div id="TopPane" class="o-top-pane">
-  <div class="c-quick-quote c-quick-quote--modal">
-  <h2 class="c-quick-quote__title">We protect what matters most</h2>
-  <input class="c-quick-quote__postal" id="qquote-postal" maxlength="5" value="Postal Code" type="text">
-  <select class="c-quick-quote__niches" id="qquote-niches">
-    <option value="/personal/auto-insurance">Auto Insurance</option>
-    <option value="/personal/home-insurance">Home Insurance</option>
-    <option value="/commercial-insurance">Commercial</option>
-    <option value="/commercial/workers-compensation">Workers Compensation</option>
-  </select>
-  <input id="saveForm" class="c-quick-quote__button" type="submit" value="Get a Quote">
-</div>
+      <div class="o-companies">
+  <ul class="o-companies__list">
+    {{#each_with_sort data 'name' 'asc'}}
+    <li class="o-company">
+      {{#if logoUrl}}
+      <a href="{{url}}" class="o-company__brand">
+        <img class="o-company__symbol" src="{{logoUrl}}" alt="{{name}}">
+      </a>
+      {{/if}}
 
-  
+      {{#if notes}}
+      <p class="o-company__notes">
+        {{{notes}}}
+      </p>
+      {{/if}}
 
-<div class="c-slider js-slider u-hidden@print">
-  <div><img src="images/classic-car_000018357694.jpg" alt="Classic Car"></div>
-  <div><img src="images/auto_000015122619.jpg" alt="Auto"></div>
-  <div><img src="images/home_000014471914.jpg" alt="Home"></div>
-  <div><img src="images/lifestyle_000008545106.jpg" alt="Lifestyle"></div>
-  <div><img src="images/business_000019184084.jpg" alt="Business"></div>
-  <div><img src="images/farm_000017391831.jpg" alt="Farm"></div>
-  <!-- <div><img src="http://placehold.it/1201x590/1d925f/ffffff" alt="Placeholder Image"></div> -->
-</div>
+      {{#if claimsPhone}}
+      <span class="o-company__claims-phone">
+        <strong>Claims:</strong> {{claimsPhone}}<br>
+      </span>
+      {{/if}}
 
-</div>
-<div class="u-row">
-  <div id="AsidePane" class="o-aside-pane DNNEmptyPane" role="complementary"> </div>
+      {{#if servicePhone}}
+      <span class="o-company-service-phone">
+        <strong>Service:</strong> {{servicePhone}}<br>
+      </span>
+      {{/if}}
 
-  <div id="ContentPane" class="o-content-pane">
-    <div class="o-niches u-hidden@print">
-  <ul class="o-niches__list">
-    
+      {{#if claimsUrl}}
+      <a class="o-company__link" href="{{claimsUrl}}">Claims</a>
+      {{/if}}
 
-<li class="c-card c-card--Your Auto">
-  <a class="c-card__link" href="#" style="background-image: url(images/auto_000015122619.jpg)">
-    <span class="c-card__wrap">
-      <h3 class="c-card__name">Your Auto</h3>
-      <span class="c-button" role="button">Get a Quote</span>
-    </span>
-  </a>
-</li>
+      {{#if billingUrl}}
+      <a class="o-company__link" href="{{billingUrl}}">Billing</a>
+      {{/if}}
 
-    
+      {{#if url}}
+      <a class="o-company__link" href="{{url}}">Website</a>
+      {{/if}}
 
-<li class="c-card c-card--Your Home">
-  <a class="c-card__link" href="#" style="background-image: url(images/home_000014471914.jpg)">
-    <span class="c-card__wrap">
-      <h3 class="c-card__name">Your Home</h3>
-      <span class="c-button" role="button">Get a Quote</span>
-    </span>
-  </a>
-</li>
-
-    
-
-<li class="c-card c-card--Your Lifestyle">
-  <a class="c-card__link" href="#" style="background-image: url(images/lifestyle_000008545106.jpg)">
-    <span class="c-card__wrap">
-      <h3 class="c-card__name">Your Lifestyle</h3>
-      <span class="c-button" role="button">Get a Quote</span>
-    </span>
-  </a>
-</li>
-
-    
-
-<li class="c-card c-card--Your Business">
-  <a class="c-card__link" href="#" style="background-image: url(images/business_000019184084.jpg)">
-    <span class="c-card__wrap">
-      <h3 class="c-card__name">Your Business</h3>
-      <span class="c-button" role="button">Get a Quote</span>
-    </span>
-  </a>
-</li>
-
-    
-
-<li class="c-card c-card--Your Farm">
-  <a class="c-card__link" href="#" style="background-image: url(images/farm_000017391831.jpg)">
-    <span class="c-card__wrap">
-      <h3 class="c-card__name">Your Farm</h3>
-      <span class="c-button" role="button">Get a Quote</span>
-    </span>
-  </a>
-</li>
-
+    </li>
+    {{/each_with_sort}}
   </ul>
-</div>
-
-    <h2>Let's Talk About Your Insurance</h2>
-
-    <p><strong>At, Stewart Morrison Insurance Brokers Ltd</strong>,  we value your business, because you’re not simply another customer to us, you’re our client.  When you contact us, you will speak personally to a licensed Insurance Broker who will provide a thorough evaluation of your personal or business insurance needs. <strong>Stewart Morrison Insurance Brokers Ltd</strong>, partners with the leading insurance companies in Canada to allow us the ability to offer competitive pricing and the best coverage options. Our qualified <strong>team</strong> of insurance specialists will make recommendations for the right coverage to properly protect you in the event of a claim. We are a family owned insurance brokerage having been in operation since 1971, with our <strong>offices</strong> conveniently located throughout the Kawarthas and Durham Region. Our corporate head office is located in Lindsay, Ontario with branch offices in the communities of Port Perry, Fenelon Falls, Peterborough, Woodville and Bobcaygeon to serve you.
-
-    <h3>Our customers love us</h3>
-
-    <blockquote>"It's really wonderful. I would be lost without Prototype Insurance. Fantastic, I'm totally blown away by Prototype Insurance. This is unbelievable. After using Prototype Insurance my buisness skyrocketed!"
-    <cite>Ravil H.</cite></blockquote>
-  </p></div>
-</div>
-<div id="BottomPane" class="o-bottom-pane">
-  <div class="o-companies--carousel">
-    <h3>Trusted by</h3>
-    <div class="u-row o-companies__slider js-companies__slider">
-      <div><img src="/images/carriers/aviva.jpg" alt="Aviva"></div>
-      <div><img src="/images/carriers/intact.jpg" alt="Intact"></div>
-      <div><img src="/images/carriers/travelers.jpg" alt="Travelers"></div>
-      <div><img src="/images/carriers/commonwell.jpg" alt="Commonwell"></div>
-      <div><img src="/images/carriers/encon.jpg" alt="Encon"></div>
-      <div><img src="/images/carriers/novex.jpg" alt="Novex"></div>
-      <div><img src="/images/carriers/wawanesa.jpg" alt="Wawanesa"></div>
-      <div><img src="/images/carriers/westerngeneral.jpg" alt="Western General"></div>
-      <div><img src="/images/carriers/eccl.jpg" alt="Ecclesiastical"></div>
-      <div><img src="/images/carriers/marine.jpg" alt="Premier Marine"></div>
-      <div><img src="/images/carriers/sportscan.jpg" alt="Sports-Can"></div>
-      <div><img src="/images/carriers/pal.jpg" alt="Pal Insurance Brokers"></div>
-      <div><img src="/images/carriers/canam.jpg" alt="CanAm"></div>
-      <div><img src="/images/carriers/eiu.jpg" alt="Equine Insurance Underwriters"></div>
-      <div><img src="/images/carriers/jevco.jpg" alt="Jevco"></div>
-      <div><img src="/images/carriers/bii.jpg" alt="b i and i"></div>
-      <div><img src="/images/carriers/simmlands.jpg" alt="Simmlands"></div>
-      <div><img src="/images/carriers/tic.jpg" alt="nc travel insurance"></div>
-      <div><img src="/images/carriers/guarantee.jpg" alt="The Guarantee"></div>
-      <div><img src="/images/carriers/optimum.jpg" alt="Optimum Insurance Company Inc."></div>
-    </div>
-  </div>
 </div>
     </div>
     <footer class="o-footer u-hidden@print" role="contentinfo">

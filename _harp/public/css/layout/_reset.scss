@@ -1,0 +1,84 @@
+// DotNetNuke
+.dnnEditState .DnnModule { opacity: 1 !important; }
+.DNNEmptyPane { display: none !important; }
+.dnnSortable {
+  &.ui-sortable,
+  &.ui-droppable { padding: inherit; }
+}
+
+.aside {
+  .ModRevMoonRayFormC,
+  .dnnFormAndList {
+    background-color: white;
+  }
+}
+
+// Control Bar
+.showControlBar {
+  $control-bar-height: 53px;
+  body { margin-top: $control-bar-height; }
+  .fixed,
+  .blur { top: $control-bar-height; }
+
+  #canvas { margin-top: (-$control-bar-height); }
+}
+
+#ControlBar table {
+  &,
+  & * {
+    height: inherit;
+    margin: inherit;
+    padding: inherit;
+  }
+}
+
+// Editor Controls
+html, body.dnnEditState{
+  overflow-x: hidden;
+}
+
+// Content Editor
+[style] {
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+}
+
+[style],
+[color] {
+  color: inherit !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  b,
+  strong {
+    font-weight: inherit !important;
+  }
+}
+
+a.button {
+  &,
+  &:hover,
+  &:visited,
+  &:focus,
+  &:active {
+    color: white;
+  }
+}
+
+body form .row .row,
+body form .u-row .u-row {
+  margin: 0 rem-calc(0);
+}
+
+.Normal,
+.NormalDisabled,
+.NormalDeleted {
+  color: $body-font-color;
+  font-size: $base-font-size;
+}

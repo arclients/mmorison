@@ -8,13 +8,14 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "futura-pt", sans-serif;
 
-  .wf-loading & {
-    font-family: "Helvetica", "Arial", sans-serif;
-    visibility: hidden;
-  }
+  // .wf-loading & {
+    // font-family: "Helvetica", "Arial", sans-serif;
+    // visibility: hidden;
+  // }
 
-  .wf-active & { font-family: "futura-pt", sans-serif; }
+  // .wf-active & { font-family: "futura-pt", sans-serif; }
 
   .wf-active &,
   .wf-inactive & { visibility: visible; }

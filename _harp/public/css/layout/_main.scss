@@ -35,6 +35,12 @@
   @extend %t-panel;
   padding-bottom: $o-feature--padding;
   padding-top: $o-feature--padding;
+
+  &-wrap {
+    min-height: 320px;
+    background-position: 50% 35%;
+    background-size: cover;
+  }
 }
 
 .o-niches {
@@ -46,71 +52,3 @@
   }
 }
 
-.o-companies {
-  @extend %small-12;
-  @extend %t-panel--light;
-  @extend %text-center;
-  padding: 2em 0 3em;
-
-  h3 {
-    color: $jet--light;
-    margin-bottom: .5em;
-  }
-
-  img {
-    border-radius: 50%;
-    display: inline-block;
-    margin: 0 .5em 1em;
-    opacity: .4;
-  }
-
-  .slick {
-    &-dots {
-      display: none !important;
-      list-style: none;
-
-      li {
-        display: inline;
-        margin: 0 10px;
-      }
-    }
-  }
-}
-
-// Quote Form
-.quotrr {
-
-  .locator,
-  .surveyor {
-    @extend %row;
-  }
-
-  .pusher {
-    @extend %button;
-    @extend %button--success;
-    @extend %button--expand;
-    border-radius: 6px;
-    color: $black;
-  }
-
-  .field { @extend %small-12; }
-
-  body & {
-    .firstName,
-    .lastName,
-    .city,
-    .state {
-      @extend %small-6;
-      @extend %medium-12;
-    }
-
-    .address { @extend %small-9; }
-
-    .addressAdv {
-      @extend %small-3;
-      position: relative;
-      top: 21px;
-    }
-  }
-
-}

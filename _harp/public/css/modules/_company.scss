@@ -1,0 +1,64 @@
+.o-companies {
+  @extend %row;
+
+  &__list {
+    @extend %small-block-grid-1;
+    @extend %medium-block-grid-2;
+    @extend %large-block-grid-2;
+  }
+
+  &--carousel {
+    @extend %small-12;
+    @extend %t-panel--light;
+    @extend %text-center;
+    padding: 2em 0 3em;
+
+    h3 {
+      color: $jet--light;
+      margin-bottom: .5em;
+    }
+
+    img {
+      display: inline-block;
+      margin: 0 .5em 1em;
+      max-height: 149px;
+      max-width: 149px;
+      opacity: .4;
+    }
+
+    .slick {
+      &-dots {
+        display: none !important;
+        list-style: none;
+
+        li {
+          display: inline;
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+
+}
+
+.o-company {
+
+  &__brand {
+    display: block;
+    height: 70px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  &__symbol {
+    bottom: 0%;
+    max-height: 70px;
+    max-width: 220px;
+    position: absolute;
+  }
+
+  &__link {
+    @extend %button;
+    @extend %button--tiny;
+  }
+}

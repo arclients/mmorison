@@ -1,0 +1,44 @@
+<div class="o-companies">
+  <ul class="o-companies__list">
+    {{#each_with_sort data 'name' 'asc'}}
+    <li class="o-company">
+      {{#if logoUrl}}
+      <a href="{{url}}" class="o-company__brand">
+        <img class="o-company__symbol" src="{{logoUrl}}" alt="{{name}}" />
+      </a>
+      {{/if}}
+
+      {{#if notes}}
+      <p class="o-company__notes">
+        {{{notes}}}
+      </p>
+      {{/if}}
+
+      {{#if claimsPhone}}
+      <span class="o-company__claims-phone">
+        <strong>Claims:</strong> {{claimsPhone}}<br>
+      </span>
+      {{/if}}
+
+      {{#if servicePhone}}
+      <span class="o-company-service-phone">
+        <strong>Service:</strong> {{servicePhone}}<br>
+      </span>
+      {{/if}}
+
+      {{#if claimsUrl}}
+      <a class="o-company__link" href="{{claimsUrl}}">Claims</a>
+      {{/if}}
+
+      {{#if billingUrl}}
+      <a class="o-company__link" href="{{billingUrl}}">Billing</a>
+      {{/if}}
+
+      {{#if url}}
+      <a class="o-company__link" href="{{url}}">Website</a>
+      {{/if}}
+
+    </li>
+    {{/each_with_sort}}
+  </ul>
+</div>

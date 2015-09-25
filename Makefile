@@ -17,3 +17,6 @@ deploy:
 	git commit -a -m "$(NOW)"
 	git push -u origin gh-pages
 
+upload:
+	scp css/skin.css stephen.way@revweb:/mnt/Samba/Stephen/Mot/Portals/mmorrison/Skins/StewartMorrison/css/
+

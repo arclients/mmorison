@@ -3,40 +3,26 @@
   margin-bottom: 1.5em;
   position: absolute;
   top: 0;
-
-  @media #{$medium-up} {
-    position: relative;
-  }
+  @media #{$medium-up} { position: relative; }
 
   .slick {
-
-    &-list {
-      @extend %small-row;
-    }
-
+    &-list { @extend %small-row; }
     &-track {
       max-height: 596px;
       overflow: hidden;
-
-      @media #{$medium-up} {
-        max-height: 334px;
-      }
-
+      @media #{$medium-up} { max-height: 334px; }
     }
 
     &-slide img {
       height: 519px;
       margin-left: -26%;
-
       @media #{$medium-up} {
         height: auto;
         margin-left: 0;
         margin-top: -7%;
         width: 100%;
       }
-
     }
-
   }
-
 }
+
