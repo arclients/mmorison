@@ -1,7 +1,7 @@
 .o-top-pane {
-  position: relative;
-  overflow: hidden;
   min-height: 84vh;
+  overflow: hidden;
+  position: relative;
   @media #{$small-only} {
     height: 290px;
   }
@@ -20,13 +20,13 @@
 .o-aside-pane {
   @extend %small-12;
   @extend %medium-4;
-  @extend %medium-push-8;;
+  @extend %medium-push-8;
   @media #{$medium-up} { padding-left: 20px; }
 
   &.DNNEmptyPane + .o-content-pane {
     @extend %medium-12;
-    right: 0; // reset pull
     border-right: 0;
+    right: 0; // reset pull
   }
 }
 
@@ -37,9 +37,24 @@
   padding-top: $o-feature--padding;
 
   &-wrap {
-    min-height: 320px;
     background-position: 50% 35%;
     background-size: cover;
+    min-height: 320px;
+    position: relative;
+
+    &__color {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(to left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .5));
+    }
+
+    &__icon {
+      position: relative;
+      z-index: 10;
+    }
   }
 }
 

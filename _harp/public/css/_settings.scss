@@ -64,6 +64,7 @@ $indigo: #4531b1;
 $purple: #a836ad;
 $pink: #f16896;
 $yellow: #fff0a4;
+$yellow2: rgb(253, 254, 69);
 $green: #a6f2db;
 $red: #e84545;
 
@@ -79,7 +80,7 @@ $primary-color: $blue;
 $secondary-color: $blue--light;
 $alert-color: $red;
 $success-color: $green--neon;
-$warning-color: $orange;
+$warning-color: $yellow2;
 $info-color: $purple;
 
 // We use these to control various global styles
@@ -180,7 +181,7 @@ $header-font-color: $blue;
 
 // We use these to control header font sizes
 $h1-font-size: rem-calc(58);
-$h2-font-size: rem-calc(55);
+$h2-font-size: rem-calc(45);
 $h3-font-size: rem-calc(58);
 // $h4-font-size: rem-calc(23);
 // $h5-font-size: rem-calc(18);

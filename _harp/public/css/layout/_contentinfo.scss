@@ -32,6 +32,7 @@
       @extend %button--success;
       border-radius: 6px;
       color: $black;
+      text-transform: uppercase;
 
       @media #{$small-only} {
         padding-left: 0;
@@ -73,12 +74,12 @@
     }
   }
 
-  &__companyinfo { @extend %medium-4; }
+  &__companyinfo { @extend %medium-6; }
 
   &__logo { margin-bottom: 1.5em; }
 
   &__widget {
-    @extend %medium-4;
+    @extend %medium-3;
 
     h6 { text-transform: uppercase; }
 
