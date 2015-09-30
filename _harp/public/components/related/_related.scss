@@ -1,0 +1,45 @@
+.o-related {
+  @extend %text-center;
+
+  &__link {
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    background-size: 120px;
+    display: block;
+    margin-bottom: 1em;
+    overflow: hidden;
+    padding-top: 173px;
+    width: 90%;
+
+    @media #{$small-only} { margin: 1em auto .25em; }
+
+    @media #{$medium-up} {
+      display: inline-block;
+      max-width: 183px;
+    }
+
+  }
+
+  &__wrap {
+    display: block;
+    transition-duration: .5s;
+  }
+
+  &__name {
+    font-size: rem-calc(23);
+    margin-top: .5em;
+    min-height: 80px;
+    padding-top: .25em;
+
+    @media #{$small-only} { font-size: rem-calc(33); }
+    @media #{$medium-only} { @media #{$portrait} { font-size: rem-calc(22); } }
+  }
+
+  .c-button {
+    @extend %button--small;
+    @extend %button--tiny\@md;
+    background-color: $white;
+    font-weight: bold;
+
+  }
+}
