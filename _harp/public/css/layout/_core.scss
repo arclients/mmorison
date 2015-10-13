@@ -40,3 +40,7 @@ h6 {
   &--unpinned { transform: translateY(-100%); }
 }
 
+.super-heading {
+  font-size: $h1-font-size;
+  color: #525252;
+}

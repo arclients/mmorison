@@ -10,7 +10,7 @@
 
   .pusher {
     @extend %button;
-    @extend %button--warning;
+    @extend %button--success;
     @extend %button--expand;
     border-radius: 6px;
     color: $black;
@@ -35,6 +35,10 @@
       position: relative;
       top: 21px;
     }
+  }
+
+  .state select{
+    height: auto !important;
   }
 
 }

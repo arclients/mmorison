@@ -1,3 +1,7 @@
+.main {
+  padding: rem-calc(30) 0;
+}
+
 .o-top-pane {
   min-height: 84vh;
   overflow: hidden;
@@ -8,6 +12,19 @@
   @media #{$medium-up} {
     min-height: 0;
   }
+}
+
+.o-feature-wrap {
+  .u-row-wrap {
+    background-color: rgba(white, .8);
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+  }
+}
+
+.o-feature-pane {
+  text-align: center;
 }
 
 .o-content-pane {
