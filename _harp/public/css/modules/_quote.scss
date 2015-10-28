@@ -2,10 +2,15 @@
 .quotrr {
   border: grey 1px solid;
   padding: 1em;
+  border-radius: 6px;
 
   .locator,
   .surveyor {
     @extend %row;
+  }
+
+  .input, .select {
+    border-radius: 6px;
   }
 
   .pusher {
@@ -15,6 +20,7 @@
     border-radius: 6px;
     color: $black;
     text-transform: uppercase;
+    margin-bottom: 0;
   }
 
   .field { @extend %small-12; }
