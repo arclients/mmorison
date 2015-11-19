@@ -7,7 +7,7 @@
   overflow: hidden;
   position: relative;
   @media #{$small-only} {
-    height: 290px;
+    //height: 290px;
   }
   @media #{$medium-up} {
     min-height: 0;
@@ -80,11 +80,13 @@
 }
 
 .o-niches {
-
   &__list {
     @extend %small-block-grid-1;
     @extend %medium-block-grid-5;
     @extend %large-block-grid-5;
+  }
+  @media #{$small-only} {
+    margin-top: 520px;
   }
 }
 

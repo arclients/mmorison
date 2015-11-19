@@ -33,7 +33,10 @@ body .c-quick-quote {
     padding: 15px 1em;
     position: absolute;
     z-index: 5;
-
+    @media #{$small-only} {
+      top: 251px;
+      max-height: 268px;
+    }
     @media #{$medium-up} {
       margin-top: 0;
       padding: 50px 1em 25px;
@@ -41,7 +44,6 @@ body .c-quick-quote {
       right: 0;
       top: 0;
     }
-
     @media #{$large-up} { padding-top: 75px; }
 
   }
